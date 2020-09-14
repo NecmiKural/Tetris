@@ -72,8 +72,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 0, 1, 0, 0},
             {0, 0, 0, 0, 0}
         }
-
-    }
+    },
 
     //T
     {
@@ -146,7 +145,8 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 0, 0, 0, 0}
         }
     },
-// N mirrored
+    //1st rotation
+    // N mirrored
     {
         //1st rotation
         {
@@ -182,7 +182,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
         }
    },
 
-       //L
+    //L
     {
         //1st rotation
         {
@@ -217,7 +217,5 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             { 0, 0, 0, 0, 0},  //
             { 0, 0, 0, 0, 0}   //
         }
-    },
-
-
+    }
 };
