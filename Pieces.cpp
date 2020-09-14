@@ -297,7 +297,7 @@ int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */]
         {-2, -2},
         {-4, -2}
         {-2, -2}
-    }
+    },
      
     //N
     {
