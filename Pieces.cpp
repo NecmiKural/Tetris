@@ -84,7 +84,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 1, 2, 1, 0},
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0}
-        }
+        },
         //2nd rotation
         {
             {0, 0, 0, 0, 0},
@@ -92,7 +92,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 0, 2, 1, 0},
             {0, 0, 1, 0, 0},
             {0, 0, 0, 0, 0}
-        }
+        },
         //3rd rotation
         {
             {0, 0, 0, 0, 0},
@@ -100,7 +100,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 1, 2, 1, 0},
             {0, 0, 1, 0, 0},
             {0, 0, 0, 0, 0}
-        }
+        },
         //4th rotation
         {
             {0, 0, 0, 0, 0},
