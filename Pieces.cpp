@@ -145,7 +145,7 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             {0, 0, 0, 0, 0}
         }
     },
-    //1st rotation
+
     // N mirrored
     {
         //1st rotation
@@ -280,6 +280,14 @@ int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */]
     {
         {-1, -2},
         {-2, -3},
+        {-1, -3},
+        {-1, -3}
+    },
+
+    //L
+    {
+        {-2, -2},
+        {-2, -2},
         {-1, -3},
         {-1, -3}
     },
