@@ -255,6 +255,17 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
             { 0, 0, 0, 0, 0}   //
         }
     }
+};
 
+// Displacement of the piece to the position where it is first drawn in the board when it is created
+int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */] = {
+
+    //Square
+    {
+        {},
+        {},
+        {},
+        {},
+    },
 
 };
