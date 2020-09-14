@@ -287,9 +287,10 @@ int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */]
     {
         {-2, -2},
         {-2, -2},
-        {-1, -3},
-        {-1, -3}
+        {-3, -2},
+        {-4, -2}
     },
+<<<<<<< Updated upstream
      
     //N
     {
@@ -306,4 +307,15 @@ int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */]
         {-2, -3}, //3rd rotation
         {-2, -2}, //4th rotation
     },
+=======
+
+    //L mirrored
+    {
+        {-2, -2},
+        {-2, -2},
+        {-4, -2}
+        {-2, -2}
+    }
+
+>>>>>>> Stashed changes
 };
