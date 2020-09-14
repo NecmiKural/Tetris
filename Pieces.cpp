@@ -257,61 +257,61 @@ int PiecesArray[7 /* kind */][4 /* rotation */][5 /* row */][5 /* column */] ={
 };
 
 // Displacement of the piece to the position where it is first drawn in the board when it is created
-int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */] = {
+int PiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */] = {
 
     //Square
     {
-        {-2, -3},
-        {-2, -3},
-        {-2, -3},
-        {-2, -3}
+        {-2, -3},   //1st rotation
+        {-2, -3},   //2nd rotation
+        {-2, -3},   //3rd rotation
+        {-2, -3}    //4th rotation
     },
 
     //I
     {
-        {-2, -1},
-        {-1, -4},
-        {-1, -2},
-        {-1, -4}
+        {-2, -1},   //1st rotation
+        {-1, -4},   //2nd rotation
+        {-1, -2},   //3rd rotation
+        {-1, -4}    //4th rotation
     },
 
     //T
     {
-        {-1, -2},
-        {-2, -3},
-        {-1, -3},
-        {-1, -3}
+        {-1, -2},   //1st rotation
+        {-2, -3},   //2nd rotation
+        {-1, -3},   //3rd rotation
+        {-1, -3}    //4th rotation
     },
 
     //L
     {
-        {-2, -2},
-        {-2, -2},
-        {-3, -2},
-        {-4, -2}
+        {-2, -2},   //1st rotation
+        {-2, -2},   //2nd rotation
+        {-3, -2},   //3rd rotation
+        {-4, -2}    //4th rotation
     },
 
     //L mirrored
     {
-        {-2, -2},
-        {-2, -2},
-        {-4, -2}
-        {-2, -2}
+        {-2, -2},   //1st rotation
+        {-2, -2},   //2ndrotation
+        {-4, -2},   //3rd rotation
+        {-2, -2}    //4th rotation
     },
      
     //N
     {
-        {-2, -3}, //1st rotation
-        {-2, -3}, //2nd rotation
-        {-2, -3}, //3rd rotation
-        {-2, -2}, //4th rotation
+        {-2, -3},   //1st rotation
+        {-2, -3},   //2nd rotation
+        {-2, -3},   //3rd rotation
+        {-2, -2}    //4th rotation
     },
     
     //N mirrored
     {
-        {-2, -3}, //1st rotation
-        {-2, -3}, //2nd rotation
-        {-2, -3}, //3rd rotation
-        {-2, -2}, //4th rotation
+        {-2, -3},   //1st rotation
+        {-2, -3},   //2nd rotation
+        {-2, -3},   //3rd rotation
+        {-2, -2}    //4th rotation
     },
 };
