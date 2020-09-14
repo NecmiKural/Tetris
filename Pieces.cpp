@@ -313,5 +313,5 @@ int PiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */] 
         {-2, -3},   //2nd rotation
         {-2, -3},   //3rd rotation
         {-2, -2}    //4th rotation
-    },
+    }
 };
