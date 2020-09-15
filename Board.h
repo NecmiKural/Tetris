@@ -28,9 +28,9 @@ class Board
         Board                       (Pieces *pPieces, int pScreenHeight);
 
         int GetXPosInPixels         (int pPos);
-        int GetYPosInPixels         (int pPos);
-        bool IsFreeBlock            (int pX, int pY);
-        bool IsPossibleMovement     (int pX, int pY, int pPiece, int pRotation);
+        int GetYPosInPixels         (int pPos);                                     
+        bool IsFreeBlock            (int pX, int pY);                               //checks the block is filled or empty.
+        bool IsPossibleMovement     (int pX, int pY, int pPiece, int pRotation);    // checks if there is empty block or filled block to fill
         void StorePiece             (int pX, int pY, int pPiece, int pRotation);    //Store a piece in the board by filling the blocks
         void DeletePossibleLines    ();                                             //We should remove unnecessary lines
         bool IsGameOver             ();
