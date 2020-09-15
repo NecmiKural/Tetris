@@ -42,7 +42,7 @@ class Board
         Pieces *mPieces;
         int mScreenHeight;
     
-        void InitBoard();
+        void InitBoard();           //Prepares board at init
         void DeleteLine (int pY);   //Deletes a line by moving all above lines down
 };
 
