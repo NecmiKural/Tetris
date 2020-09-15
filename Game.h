@@ -23,8 +23,8 @@ public:
 
     Game            (Board *pBoard, Pieces *pPieces, IO *pIO, int pScreenHeight);
 
-    void DrawScene ();                                                          //Calls previous objects to draw new scene
-    void CreateNewPiece ();
+    void DrawScene ();              //Calls previous objects to draw new scene
+    void CreateNewPiece ();         //Creates random piece and next piece
 
     int mPosX, mPosY;               // Position of the piece that is falling down
     int mPiece, mRotation;          // Kind and rotation the piece that is falling down
