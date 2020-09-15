@@ -1,27 +1,27 @@
 #include "Board.h"
 
-/* 
-======================================                                  
+/*
+======================================
 Returns the horizontal position (in pixels) of the block given like parameter
- 
+
 Parameters:
- 
+
 >> pPos:  Horizontal position of the block in the board
-====================================== 
+======================================
 */
 int Board::GetXPosInPixels (int pPos)
 {
     return  ( ( BOARD_POSITION - (BLOCK_SIZE * (BOARD_WIDTH / 2)) ) + (pPos * BLOCK_SIZE) );
 }
- 
-/* 
-======================================                                  
+
+/*
+======================================
 Returns the vertical position (in pixels) of the block given like parameter
- 
+
 Parameters:
- 
+
 >> pPos:  Horizontal position of the block in the board
-====================================== 
+======================================
 */
 int Board::GetYPosInPixels (int pPos)
 {
@@ -40,9 +40,9 @@ Parameters:
 */
 bool Board::IsFreeBlock (int pX,int pY)
 {
-    if (mBoard [pX][pY] == POS_FREE) 
-        return true; 
-    else 
+    if (mBoard [pX][pY] == POS_FREE)
+        return true;
+    else
         return false;
 }
 
@@ -86,7 +86,7 @@ bool Board::IsPossibleMovement (int pX,int pY, int pPiece, int pRotation){
     }
     // No collision
     return true;
-}
+} 
 
 /* Parameters:
 
@@ -96,7 +96,7 @@ bool Board::IsPossibleMovement (int pX,int pY, int pPiece, int pRotation){
 >> pRotation: 1 of the 4 possible rotations */
 
 //Store a piece in the board by filling the blocks
-void Board::StorePiece (int pX, int pY, int pPiece, int pRotation){                    
+void Board::StorePiece (int pX, int pY, int pPiece, int pRotation){
     for (int i1 = pX, i2 = 0; i1 < pX + PIECE_BLOCKS; i1++, i2++)
     {
         for (int j1 = pY, j2 = 0; j1 < pY + PIECE_BLOCKS; j1++, j2++)
@@ -108,7 +108,7 @@ void Board::StorePiece (int pX, int pY, int pPiece, int pRotation){
 }
 
 // we should remove unnecessary lines
-void Board::DeletePossibleLines ()                                                     
+void Board::DeletePossibleLines ()
 {
     for (int i = 0; i < BOARD_HEIGHT; i++)
     {
@@ -127,7 +127,7 @@ void Board::DeletePossibleLines ()
 }
 
 //Checks If the first line has blocks. IF it has, than game is over
-bool Board::IsGameOver(){                                                       
+bool Board::IsGameOver(){
     for (int i = 0; i < BOARD_WIDTH; i++)
     {
         if (mBoard[i][0] == POS_FILLED)
@@ -168,8 +168,3 @@ void Board::DeleteLine(int pY){
         }
     }
 }
-
-
-
-
-
