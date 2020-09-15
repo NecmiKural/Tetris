@@ -22,6 +22,43 @@ void Game::CreateNewPiece()                                                     
 
 /* 
 ======================================                                  
+Get a random int between to integers
+ 
+Parameters:
+>> pA: First number
+>> pB: Second number
+====================================== 
+*/
+int Game::GetRand (int pA, int pB)
+{
+    return rand () % (pB - pA + 1) + pA;
+}
+
+/* 
+======================================                                  
+Initial parameters of the game
+====================================== 
+*/
+void Game::InitGame()
+{
+    // Init random numbers
+    srand ((unsigned int) time(NULL));
+ 
+    // First piece
+    mPiece          = GetRand (0, 6);
+    mRotation       = GetRand (0, 3);
+    mPosX           = (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
+    mPosY           = mPieces->GetYInitialPosition (mPiece, mRotation);
+ 
+    //  Next piece
+    mNextPiece      = GetRand (0, 6);
+    mNextRotation   = GetRand (0, 3);
+    mNextPosX       = BOARD_WIDTH + 5;
+    mNextPosY       = 5;    
+}
+
+/* 
+======================================                                  
 Draw piece
  
 Parameters:
