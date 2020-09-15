@@ -27,7 +27,7 @@ void Board::DeleteLine(int pY){
 >> pPiece:    Piece to draw
 >> pRotation: 1 of the 4 possible rotations */
 
-void StorePiece (int pX, int pY, int pPiece, int pRotation){                    //Store a piece in the board by filling the blocks
+void Board::StorePiece (int pX, int pY, int pPiece, int pRotation){                    //Store a piece in the board by filling the blocks
     for (int i1 = pX, i2 = 0; i1 < pX + PIECE_BLOCKS; i1++, i2++)
     {
         for (int j1 = pY, j2 = 0; j1 < pY + PIECE_BLOCKS; j1++, j2++)
@@ -39,7 +39,7 @@ void StorePiece (int pX, int pY, int pPiece, int pRotation){                    
 }
 
 
-void DeletePossibleLines ()                                                     // we should remove unnecessary lines   >sonradan Board::'a' ihtiyacımız olabilir
+void Board::DeletePossibleLines ()                                                     // we should remove unnecessary lines   >sonradan Board::'a' ihtiyacımız olabilir
 {
     for (int i = 0; i < BOARD_HEIGHT; i++)
     {
