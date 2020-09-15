@@ -23,27 +23,27 @@
  
 class Board
 {
-public:
- 
-    Board                       (Pieces *pPieces, int pScreenHeight);
- 
-    int GetXPosInPixels         (int pPos);
-    int GetYPosInPixels         (int pPos);
-    bool IsFreeBlock            (int pX, int pY);
-    bool IsPossibleMovement     (int pX, int pY, int pPiece, int pRotation);
-    void StorePiece             (int pX, int pY, int pPiece, int pRotation);
-    void DeletePossibleLines    ();
-    bool IsGameOver             ();
- 
-private:
- 
-    enum { POS_FREE, POS_FILLED };          // POS_FREE = free position of the board; POS_FILLED = filled position of the board
-    int mBoard [BOARD_WIDTH][BOARD_HEIGHT]; // Board that contains the pieces
-    Pieces *mPieces;
-    int mScreenHeight;
- 
-    void InitBoard();
-    void DeleteLine (int pY);
+    public:
+    
+        Board                       (Pieces *pPieces, int pScreenHeight);
+    
+        int GetXPosInPixels         (int pPos);
+        int GetYPosInPixels         (int pPos);
+        bool IsFreeBlock            (int pX, int pY);
+        bool IsPossibleMovement     (int pX, int pY, int pPiece, int pRotation);
+        void StorePiece             (int pX, int pY, int pPiece, int pRotation);
+        void DeletePossibleLines    ();
+        bool IsGameOver             ();
+    
+    private:
+    
+        enum { POS_FREE, POS_FILLED };          // POS_FREE = 0 free position of the board; POS_FILLED = 1 filled position of the board
+        int mBoard [BOARD_WIDTH][BOARD_HEIGHT]; // Board that contains the pieces
+        Pieces *mPieces;
+        int mScreenHeight;
+    
+        void InitBoard();
+        void DeleteLine (int pY);   //Deletes a line by moving all above lines down
 };
 
 
