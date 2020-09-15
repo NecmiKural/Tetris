@@ -1,17 +1,17 @@
 #include "Board.h"
 
 /*
-======================================                                  
+======================================
 Init the board blocks with free positions
-====================================== 
+======================================
 */
 void Board::InitBoard()
 {
     for (int i = 0; i < BOARD_WIDTH; i++){
         for (int j = 0; j < BOARD_HEIGHT; j++){
              mBoard[i][j] = POS_FREE;
-        }  
-    }     
+        }
+    }
 }
 
 /*
@@ -53,7 +53,7 @@ void Board::StorePiece (int pX, int pY, int pPiece, int pRotation){             
 }
 
 
-void Board::DeletePossibleLines ()                                                     // we should remove unnecessary lines   >sonradan Board::'a' ihtiyacımız olabilir
+void Board::DeletePossibleLines ()                                                     // we should remove unnecessary lines
 {
     for (int i = 0; i < BOARD_HEIGHT; i++)
     {
