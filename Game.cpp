@@ -62,3 +62,45 @@ void Game::DrawPiece (int pX, int pY, int pPiece, int pRotation)
         
     }
 }
+
+/* 
+======================================                                  
+Draw board
+ 
+Draw the two lines that delimit the board
+====================================== 
+*/
+void Game::DrawBoard ()
+{
+    // Calculate the limits of the board in pixels  
+    int mX1 = BOARD_POSITION - (BLOCK_SIZE * (BOARD_WIDTH / 2)) - 1;
+    int mX2 = BOARD_POSITION + (BLOCK_SIZE * (BOARD_WIDTH / 2));
+    int mY = mScreenHeight - (BLOCK_SIZE * BOARD_HEIGHT);
+     
+    // Check that the vertical margin is not to small
+    //assert (mY > MIN_VERTICAL_MARGIN);
+ 
+    // Rectangles that delimits the board
+    mIO->DrawRectangle (mX1 - BOARD_LINE_WIDTH, mY, mX1, mScreenHeight - 1, BLUE);
+ 
+    mIO->DrawRectangle (mX2, mY, mX2 + BOARD_LINE_WIDTH, mScreenHeight - 1, BLUE);
+     
+    // Check that the horizontal margin is not to small
+    //assert (mX1 > MIN_HORIZONTAL_MARGIN);
+ 
+    // Drawing the blocks that are already stored in the board
+    mX1 += 1;
+    for (int i = 0; i < BOARD_WIDTH; i++)
+    {
+        for (int j = 0; j < BOARD_HEIGHT; j++)
+        {   
+            // Check if the block is filled, if so, draw it
+            if (!mBoard->IsFreeBlock(i, j))  
+                mIO->DrawRectangle ( mX1 + i * BLOCK_SIZE, 
+                                        mY + j * BLOCK_SIZE, 
+                                        (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1, 
+                                        (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, 
+                                        RED);
+        }
+    }   
+}

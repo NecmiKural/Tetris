@@ -41,8 +41,8 @@ private:
 
     int GetRand (int pA, int pB);
     void InitGame();
-    void DrawPiece (int pX, int pY, int pPiece, int pRotation);
-    void DrawBoard ();
+    void DrawPiece (int pX, int pY, int pPiece, int pRotation);     //Draws Pieces
+    void DrawBoard ();      //Draws Board
 };
 
 #endif // _GAME_
