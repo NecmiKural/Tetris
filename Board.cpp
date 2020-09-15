@@ -71,34 +71,34 @@ void Board::DeletePossibleLines ()                                              
     }
 }
 
-/* 
-======================================                                  
+/*
+======================================
 Returns 1 (true) if the this block of the board is empty, 0 if it is filled
- 
+
 Parameters:
- 
+
 >> pX:        Horizontal position in blocks
 >> pY:        Vertical position in blocks
- ====================================== 
+ ======================================
 */
 bool Board::IsFreeBlock (int pX,int pY)
 {
      if (mBoard [pX][pY] == POS_FREE) return true; else return false;
      }
-  
 
-   /* 
- ======================================                                  
+
+   /*
+ ======================================
  Check if the piece can be stored at this position without any collision
  Returns true if the movement is  possible, false if it not possible
- 
+
  Parameters:
- 
+
  >> pX:        Horizontal position in blocks
  >> pY:        Vertical position in blocks
  >> pPiece:    Piece to draw
  >> pRotation: 1 of the 4 possible rotations
- ====================================== 
+ ======================================
  */
 bool Board::IsPossibleMovement (int pX,int pY, int pPiece, int pRotation){
     // Checks collision with pieces already stored in the board or the board limits
@@ -107,23 +107,32 @@ bool Board::IsPossibleMovement (int pX,int pY, int pPiece, int pRotation){
     {
         for(int j1 = pY, j2=0;j1 < pY + PIECE_BLOCKS; j1++,j2++){
          // Check if the piece is outside the limits of the board
-            if( i1 < 0        ||   
-                i1  >BOARD_WIDTH - 1        ||  
+            if( i1 < 0        ||
+                i1  >BOARD_WIDTH - 1        ||
                 j1 > BOARD_HEIGHT - 1)
             {
                 if(mPieces->GetBlockType (pPiece, pRotation, j2, i2) != 0 ){
                     return 0;
-                }      
+                }
             }
          // Check if the piece have collisioned with a block already stored in the map
             if(j1>=0){
                 if(( mPieces->GetBlockType(pPiece, pRotation, j2, i2) !=0) &&(!IsFreeBlock(i1,j1))){
                     return false;
                 }
-                
+
             }
         }
     }
     // No collision
     return true;
+}
+
+bool Board::IsGameOver(){                                                       //Checks If the first line has blocks. IF it has, than game is over
+    for (int i = 0; i < BOARD_WIDTH; i++)
+    {
+        if (mBoard[i][0] == POS_FILLED)
+        return true;
+    }
+    return false;
 }
