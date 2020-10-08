@@ -38,6 +38,7 @@ int Game::GetRand (int pA, int pB)
 ======================================                                  
 Initial parameters of the game
 ====================================== 
+Deneme
 */
 void Game::InitGame()
 {
